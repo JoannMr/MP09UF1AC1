@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formulari</title>
+</head>
+<body>
+    <h2>Formulario de Registro de Riot Games</h2>
+    <form action="/submit-form" method="post">
+
+        <label for="nom">Nom:</label>
+        <input type="text" id="nom" name="nom" maxlength="20" required autofocus placeholder="Escriu el teu nom"><br><br>
+
+        <label for="cognoms">Cognoms:</label>
+        <input type="text" id="cognoms" name="cognoms" required placeholder="Escriu els teus cognoms"><br><br>
+
+        <label for="dni">Document d’identitat (DNI/NIE):</label>
+        <input type="text" id="dni" name="dni" required pattern="[0-9]{8}[A-Z]" placeholder="Exemple: 12345678X"><br><br>
+
+        <label for="edat">Edat:</label>
+        <input type="number" id="edat" name="edat" min="0" max="100" required placeholder="Escriu la teva edat"><br><br>
+
+        <label for="data-naixement">Data de naixement:</label>
+        <input type="date" id="data-naixement" name="data-naixement" required><br><br>
+
+        <label for="email">Correu electrònic:</label>
+        <input type="email" id="email" name="email" required placeholder="Exemple: email@exemple.com"><br><br>
+
+        <label for="contrasenya">Contrasenya:</label>
+        <input type="password" id="contrasenya" name="contrasenya" required placeholder="Escriu una contrasenya"><br><br>
+
+        <label for="dni-photo">Fotografia del DNI:</label>
+        <input type="file" id="dni-photo" name="dni-photo" accept="image/*" multiple><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
